@@ -1,0 +1,39 @@
+include:
+  - template: Jobs/SAST.gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - security
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Compiling the code."
+    - echo "Compile complete."
+
+unit-test-job:    
+  stage: test
+  script:
+    - echo "runnimg unit test."
+    - sleep 10
+    - echo "code coverage is 90."
+
+lint-test-job:
+  stage: test    
+  script:
+    - echo "Linting code."
+    - sleep 10
+    - echo "No lint issues found."
+
+sast:
+    stage: security
+    artifacts:
+        paths:
+            - gl-sast-report.json
+
+depoly-job:
+  script:
+    - echo "deploying application"
+    - echo "application successfully deployed."
