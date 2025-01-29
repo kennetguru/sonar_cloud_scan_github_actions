@@ -26,7 +26,7 @@
 # Feel free to take a look at our documentation (https://docs.sonarcloud.io/getting-started/github/)
 # or reach out to our community forum if you need some help (https://community.sonarsource.com/c/help/sc/9)
 
-name: Analyse with SonarCloul
+name: Analyse with SonarClould
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Analyze with SonarCloud
+      - name: Analyse with SonarCloud
 
         # You can pin the exact commit or the version.
         # uses: SonarSource/sonarcloud-github-action@v2.2.0
