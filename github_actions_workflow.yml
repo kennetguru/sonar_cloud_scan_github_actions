@@ -1,1 +1,0 @@
-# sonar_cloud_scan_github_actions
